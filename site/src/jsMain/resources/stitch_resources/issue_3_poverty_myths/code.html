@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Utopia Re-Imagined: Issue 3 - Poverty Myths</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,800;0,900;1,900&amp;family=Work+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#6e5c00",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "on-background": "#1c1c18",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#0039b3",
+                        "on-primary-fixed": "#001551",
+                        "on-tertiary-fixed": "#410000",
+                        "surface-container": "#f1eee7",
+                        "on-tertiary-container": "#ffe1dc",
+                        "primary": "#0041c8",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "on-secondary-fixed-variant": "#544600",
+                        "primary-container": "#0055ff",
+                        "surface-dim": "#dcdad3",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#ebe8e1",
+                        "on-tertiary-fixed-variant": "#930100",
+                        "secondary-fixed": "#ffe16d",
+                        "on-secondary-fixed": "#221b00",
+                        "outline-variant": "#c3c5d9",
+                        "surface-tint": "#004dea",
+                        "on-error": "#ffffff",
+                        "secondary": "#705d00",
+                        "secondary-fixed-dim": "#e9c400",
+                        "on-primary-container": "#e3e6ff",
+                        "inverse-on-surface": "#f3f0e9",
+                        "surface-variant": "#e5e2db",
+                        "inverse-surface": "#31312c",
+                        "error": "#ba1a1a",
+                        "background": "#fcf9f2",
+                        "secondary-container": "#fcd400",
+                        "on-surface": "#1c1c18",
+                        "primary-fixed": "#dce1ff",
+                        "outline": "#737688",
+                        "surface-container-highest": "#e5e2db",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fcf9f2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#a40100",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f6f3ec",
+                        "inverse-primary": "#b6c4ff",
+                        "on-surface-variant": "#434656",
+                        "surface": "#fcf9f2",
+                        "tertiary-fixed": "#ffdad4",
+                        "tertiary-container": "#d20000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "32px",
+                        "unit": "4px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Epilogue"],
+                        "body-md": ["Work Sans"],
+                        "headline-md": ["Epilogue"],
+                        "body-lg": ["Work Sans"],
+                        "headline-lg": ["Epilogue"],
+                        "label-bold": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .brutalist-shadow {
+            box-shadow: 6px 6px 0 0 #1c1c18;
+        }
+        .brutalist-shadow-blue {
+            box-shadow: 8px 8px 0 0 #0041c8;
+        }
+        .brutalist-shadow-red {
+            box-shadow: 8px 8px 0 0 #a40100;
+        }
+        .halftone-dot-bg {
+            background-image: radial-gradient(#1c1c18 2px, transparent 2px);
+            background-size: 10px 10px;
+        }
+        .speech-bubble-tail {
+            position: absolute;
+            bottom: -20px;
+            left: 40px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #1c1c18;
+        }
+        .speech-bubble-tail::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: -14px;
+            width: 0;
+            height: 0;
+            border-left: 14px solid transparent;
+            border-right: 14px solid transparent;
+            border-top: 16px solid #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-hidden flex h-screen w-full">
+<nav class="hidden md:flex bg-yellow-400 dark:bg-yellow-600 h-screen w-64 border-r-4 border-black border-b-2 border-black/20 shadow-[8px_0px_0px_0px_rgba(0,0,0,1)] fixed left-0 top-0 z-40 flex-col">
+<div class="p-6 border-b-4 border-black bg-white">
+<h2 class="text-xl font-black text-black font-headline-md uppercase tracking-tighter">TOPICS LIST</h2>
+<p class="font-body-md text-on-background font-bold uppercase text-xs mt-1">Utopia for Realists</p>
+</div>
+<div class="flex-1 overflow-y-auto py-4 font-epilogue font-bold uppercase">
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-label-bold text-label-bold">Intro</span>
+</a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<span class="font-label-bold text-label-bold">Human Progress (CH. 1)</span>
+</a>
+<a class="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-black m-2 p-3 flex items-center gap-3 Active: translate-y-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-label-bold text-label-bold">Free Money (CH. 2-4)</span>
+</a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">query_stats</span>
+<span class="font-label-bold text-label-bold">Beyond GDP (CH. 5)</span>
+</a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<span class="font-label-bold text-label-bold">Leisure Time (CH. 6)</span>
+</a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">work_off</span>
+<span class="font-label-bold text-label-bold">Useless Jobs (CH. 7-8)</span>
+</a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">public</span>
+<span class="font-label-bold text-label-bold">Open Borders (CH. 9)</span>
+</a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-bold text-label-bold">Radical Ideas (CH. 10)</span>
+</a>
+</div>
+</nav>
+<div class="flex-1 flex flex-col md:ml-64 h-full overflow-hidden relative">
+<main class="flex-1 overflow-y-auto bg-surface p-gutter pb-32">
+<div class="max-w-container-max mx-auto flex flex-col gap-8">
+<section class="w-full border-4 border-on-background bg-secondary-container brutalist-shadow-blue flex flex-col md:flex-row items-stretch relative overflow-hidden">
+<div class="absolute inset-0 halftone-dot-bg opacity-20 pointer-events-none"></div>
+<div class="p-8 md:w-1/2 flex flex-col justify-center relative z-10 bg-white border-r-4 border-on-background">
+<div class="bg-tertiary text-on-tertiary font-label-bold text-label-bold uppercase px-3 py-1 self-start border-2 border-on-background mb-4 transform -skew-x-12">Issue 03 Focus</div>
+<h1 class="font-headline-xl text-headline-xl text-on-background uppercase mb-6 leading-none">The Great<br/><span class="text-primary">Free Cash</span><br/>Experiment</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant font-bold max-w-md">For decades, we've been told giving people money without conditions creates laziness. The actual data tells a completely different, heroic story.</p>
+</div>
+<div class="md:w-1/2 relative min-h-[300px] border-t-4 md:border-t-0 border-on-background bg-primary">
+<img alt="Cash handover" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80" data-alt="A dramatic, high-contrast pop-art style illustration of a hand forcefully handing over a thick stack of green cash against a vibrant yellow background. The image features heavy black outlines and prominent Ben-Day dots halftone shading, mimicking a vintage 1960s comic book panel. The mood is energetic, heroic, and financially empowering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlHtB96ZOIVfwFqpMYGgX213jpduTM39MuUTAMXosUw9B_85OJztX0A2hk272NJhZW_k2a1OkEyBWhvUaNGyAG7sFXn5sVmJcJMDOx5ZgLC_yZ2pS6y3HhIaFChqa4OKe3ya7WN54FtyXkvjP8OAPKbfZjjNJ4x7EbS_4PZpAcA5NWIevbBJ2hspSFiXvhkAe6xAPYY9_x08X5Ku20FxsA9XHWxbKyOODZcd0rcRxpQgYuIXfSkSl3tDZJNp224H7eDl6xdY-OWWZ-"/>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8">
+<div class="col-span-1 lg:col-span-5 flex flex-col justify-center">
+<div class="relative bg-surface border-4 border-on-background p-8 rounded-[2rem] brutalist-shadow mb-12">
+<h3 class="font-headline-md text-headline-md text-tertiary uppercase mb-2">Myth #1</h3>
+<p class="font-headline-lg text-headline-lg leading-tight uppercase font-black text-on-background">"If you give them free cash, they'll just stop working!"</p>
+<div class="speech-bubble-tail"></div>
+</div>
+</div>
+<div class="col-span-1 lg:col-span-7">
+<div class="bg-primary text-on-primary border-4 border-on-background p-8 transform rotate-1 brutalist-shadow-red relative overflow-hidden h-full flex flex-col justify-center">
+<div class="absolute -top-10 -right-10 bg-secondary-container text-on-background font-headline-xl text-headline-xl p-6 border-4 border-on-background rounded-full transform rotate-12 flex items-center justify-center brutalist-shadow z-20">
+                                POW!
+                            </div>
+<div class="absolute inset-0 halftone-dot-bg opacity-30 mix-blend-multiply"></div>
+<div class="relative z-10">
+<h4 class="font-headline-lg text-headline-lg uppercase mb-4 text-secondary-container border-b-4 border-on-primary pb-2 inline-block">The Reality Check</h4>
+<p class="font-body-lg text-body-lg font-bold mb-6 text-white text-xl">Studies across continents show unconditional cash transfers have <strong>no significant impact</strong> on whether people choose to work.</p>
+<div class="bg-white text-on-background p-4 border-4 border-on-background transform -skew-x-3">
+<p class="font-label-bold text-label-bold uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">trending_up</span>
+                                        Fact: Entrepreneurship often increases as people finally have seed capital!
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-1 lg:col-span-8 mt-12 lg:mt-0">
+<div class="bg-tertiary text-on-tertiary border-4 border-on-background p-8 transform -rotate-1 brutalist-shadow-blue relative overflow-hidden h-full flex flex-col justify-center">
+<div class="absolute inset-0 halftone-dot-bg opacity-30 mix-blend-overlay"></div>
+<div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<h4 class="font-headline-lg text-headline-lg uppercase mb-4 text-white">The Temptation Fallacy</h4>
+<p class="font-body-lg text-body-lg font-bold mb-6 text-white text-lg">World Bank data consistently proves that spending on 'vice goods' like alcohol and tobacco actually drops or remains entirely flat when poverty is alleviated directly.</p>
+</div>
+<div class="w-full md:w-1/3 bg-secondary-container text-on-background border-4 border-on-background p-4 text-center transform rotate-3 brutalist-shadow">
+<span class="block font-headline-xl text-headline-xl text-primary">-1%</span>
+<span class="block font-label-bold text-label-bold uppercase mt-2">Avg drop in temptation spending</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-1 lg:col-span-4 flex flex-col justify-center mt-8 lg:mt-0">
+<div class="relative bg-surface-container border-4 border-on-background p-8 rounded-[2rem] brutalist-shadow">
+<h3 class="font-headline-md text-headline-md text-primary uppercase mb-2">Myth #2</h3>
+<p class="font-headline-lg text-headline-lg leading-tight uppercase font-black text-on-background">"They'll just waste it on booze and gambling!"</p>
+<div class="speech-bubble-tail" style="left: auto; right: 40px; transform: scaleX(-1);"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-black dark:bg-zinc-900 w-full border-t-4 border-red-600 py-8 px-12 flex justify-center items-center z-30 relative shrink-0">
+<div class="text-white font-black italic text-xl uppercase tracking-widest font-epilogue">
+                MADE BY OM GUPTA
+            </div>
+</footer>
+</div>
+</body></html>

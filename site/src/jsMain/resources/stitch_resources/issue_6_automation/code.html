@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Utopia Re-Imagined: The Return of the Luddites?</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#6e5c00",
+                      "primary-fixed-dim": "#b6c4ff",
+                      "on-background": "#1c1c18",
+                      "error-container": "#ffdad6",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed-variant": "#0039b3",
+                      "on-primary-fixed": "#001551",
+                      "on-tertiary-fixed": "#410000",
+                      "surface-container": "#f1eee7",
+                      "on-tertiary-container": "#ffe1dc",
+                      "primary": "#0041c8",
+                      "tertiary-fixed-dim": "#ffb4a8",
+                      "on-secondary-fixed-variant": "#544600",
+                      "primary-container": "#0055ff",
+                      "surface-dim": "#dcdad3",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#ebe8e1",
+                      "on-tertiary-fixed-variant": "#930100",
+                      "secondary-fixed": "#ffe16d",
+                      "on-secondary-fixed": "#221b00",
+                      "outline-variant": "#c3c5d9",
+                      "surface-tint": "#004dea",
+                      "on-error": "#ffffff",
+                      "secondary": "#705d00",
+                      "secondary-fixed-dim": "#e9c400",
+                      "on-primary-container": "#e3e6ff",
+                      "inverse-on-surface": "#f3f0e9",
+                      "surface-variant": "#e5e2db",
+                      "inverse-surface": "#31312c",
+                      "error": "#ba1a1a",
+                      "background": "#fcf9f2",
+                      "secondary-container": "#fcd400",
+                      "on-surface": "#1c1c18",
+                      "primary-fixed": "#dce1ff",
+                      "outline": "#737688",
+                      "surface-container-highest": "#e5e2db",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#fcf9f2",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary": "#a40100",
+                      "on-error-container": "#93000a",
+                      "surface-container-low": "#f6f3ec",
+                      "inverse-primary": "#b6c4ff",
+                      "on-surface-variant": "#434656",
+                      "surface": "#fcf9f2",
+                      "tertiary-fixed": "#ffdad4",
+                      "tertiary-container": "#d20000"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin": "32px",
+                      "unit": "4px",
+                      "container-max": "1280px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Epilogue"],
+                      "body-md": ["Work Sans"],
+                      "headline-md": ["Epilogue"],
+                      "body-lg": ["Work Sans"],
+                      "headline-lg": ["Epilogue"],
+                      "label-bold": ["Work Sans"]
+              },
+              "fontSize": {
+                      "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "900" }],
+                      "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                      "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                      "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                      "label-bold": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Comic Block Shadow Utility */
+        .comic-shadow {
+            box-shadow: 8px 8px 0 0 #1c1c18;
+        }
+        .comic-shadow-sm {
+            box-shadow: 4px 4px 0 0 #1c1c18;
+        }
+        /* Halftone Pattern Utility */
+        .halftone-bg {
+            background-image: radial-gradient(circle, rgba(28,28,24,0.15) 2px, transparent 2.5px);
+            background-size: 12px 12px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<div class="flex min-h-screen">
+<!-- SideNavBar (Shared Component) -->
+<aside class="bg-yellow-400 dark:bg-yellow-600 h-screen w-64 border-r-4 border-black shadow-[8px_0px_0px_0px_rgba(0,0,0,1)] fixed left-0 top-0 pt-8 z-40 hidden md:flex flex-col">
+<div class="p-6 border-b-4 border-black">
+<div class="flex items-center gap-4 mb-2">
+<div>
+<h2 class="text-xl font-black text-black font-headline-md leading-none tracking-tighter">TOPICS LIST</h2>
+<span class="font-epilogue font-bold uppercase text-black/70 text-xs">Utopia for Realists</span>
+</div>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto py-4 font-epilogue font-bold uppercase">
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">menu_book</span> Intro
+                </a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">trending_up</span> Human Progress (CH. 1)
+                </a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">payments</span> Free Money (CH. 2-4)
+                </a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">analytics</span> Beyond GDP (CH. 5)
+                </a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">schedule</span> Leisure Time (CH. 6)
+                </a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">work_off</span> Useless Jobs (CH. 7-8)
+                </a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">public</span> Open Borders (CH. 9)
+                </a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">lightbulb</span> Radical Ideas (CH. 10)
+                </a>
+</nav>
+</aside>
+<!-- Main Content Canvas (Comic Layout) -->
+<main class="flex-1 ml-0 md:ml-64 p-margin md:p-12 w-full max-w-container-max mx-auto overflow-hidden halftone-bg flex flex-col">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter flex-1">
+<!-- Hero Panel -->
+<article class="col-span-1 md:col-span-12 border-[4px] border-on-background bg-secondary-container comic-shadow relative mb-8 overflow-hidden group">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1620825937374-87fc1a6014c9?auto=format&amp;fit=crop&amp;q=80&amp;w=1200')] bg-cover bg-center opacity-40 mix-blend-multiply" data-alt="A sprawling retro-futuristic 1960s comic book style illustration of a massive, imposing metal robot looming over a stylized cityscape. Heavy black ink lines define the mechanical joints and glowing yellow eyes. The scene utilizes a restricted pop-art color palette of deep blues and vibrant reds, overlaid with a mechanical halftone printing texture to simulate vintage comic paper. The atmosphere is monumental and slightly menacing."></div>
+<div class="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+<div class="flex-1">
+<span class="inline-block bg-primary text-on-primary font-label-bold uppercase px-3 py-1 border-2 border-black mb-4 transform -skew-x-6">Issue #6</span>
+<h1 class="font-headline-xl text-on-background mb-4 uppercase leading-none drop-shadow-[3px_3px_0px_#ffffff]">The Return of<br/>the Luddites?</h1>
+<p class="font-body-lg text-on-background font-bold max-w-xl bg-white border-2 border-black p-4 comic-shadow-sm inline-block">
+                                When algorithms write poetry and robots flip burgers, what happens to the human work week? A dive into automation, AI, and our mechanical destiny.
+                            </p>
+</div>
+<div class="w-full md:w-1/3 relative">
+<!-- SFX Graphic -->
+<div class="absolute -top-12 -left-12 font-headline-xl italic text-tertiary-container drop-shadow-[4px_4px_0px_#1c1c18] transform -rotate-12 text-6xl z-20">
+                                WHIRR!
+                            </div>
+</div>
+</div>
+</article>
+<!-- Panel 1: Content Block -->
+<div class="col-span-1 md:col-span-7 border-[4px] border-on-background bg-surface-container-lowest comic-shadow p-0 flex flex-col">
+<header class="bg-primary border-b-[4px] border-on-background p-4 flex justify-between items-center">
+<h3 class="font-headline-md text-on-primary uppercase tracking-tight">Man vs. Machine</h3>
+<span class="material-symbols-outlined text-on-primary text-3xl">smart_toy</span>
+</header>
+<div class="p-6 flex-1 flex flex-col gap-4 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNjM2M1ZDkiIGZpbGwtb3BhY2l0eT0iMC4yIi8+PC9zdmc+')]">
+<p class="font-body-md text-on-background first-letter:text-5xl first-letter:font-headline-xl first-letter:float-left first-letter:mr-2 first-letter:mt-1 first-letter:text-primary">
+                            The original Luddites weren't anti-technology; they were anti-exploitation. They smashed the weaving frames because the machines were being used to bypass labor practices and reduce wages. Today, as Artificial Intelligence encroaches on cognitive labor, a similar anxiety is brewing. 
+                        </p>
+<p class="font-body-md text-on-background">
+                            Are we destined to smash the servers? Or will we finally achieve the post-scarcity leisure society promised by mid-century futurists? The answer lies not in the code, but in who owns the algorithms.
+                        </p>
+<button class="mt-auto self-start border-[3px] border-on-background bg-secondary-fixed text-on-secondary-fixed font-label-bold uppercase px-6 py-3 comic-shadow-sm hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                            Read Full Manifesto
+                        </button>
+</div>
+</div>
+<!-- Panel 2: Kapow! Callout -->
+<div class="col-span-1 md:col-span-5 border-[4px] border-on-background bg-tertiary-container comic-shadow p-8 flex flex-col justify-center items-center relative text-center overflow-visible">
+<!-- Decorative jagged edge effect simulated with borders/shadows -->
+<div class="absolute -top-6 -right-6 font-headline-xl italic text-secondary-fixed drop-shadow-[4px_4px_0px_#1c1c18] transform rotate-12 text-7xl z-20">
+                        ZAP!
+                    </div>
+<span class="material-symbols-outlined text-white text-6xl mb-4 opacity-50">precision_manufacturing</span>
+<h2 class="font-headline-lg text-white uppercase leading-tight mb-2 drop-shadow-[2px_2px_0px_#1c1c18]">
+                        85 Million
+                    </h2>
+<p class="font-label-bold text-on-tertiary-container uppercase tracking-widest bg-black text-white px-4 py-1 border-2 border-white">
+                        Jobs Displaced by 2025
+                    </p>
+<p class="font-body-md text-white mt-4 italic">
+                        *According to the World Economic Forum's predictive models.
+                    </p>
+</div>
+<!-- Panel 3: Image Focus -->
+<div class="col-span-1 md:col-span-6 border-[4px] border-on-background bg-surface-container-highest comic-shadow relative h-80 group">
+<img alt="Automated Factory Floor" class="w-full h-full object-cover filter contrast-125 saturate-150 sepia-[.2]" data-alt="A highly stylized comic book panel depicting a dense, repetitive automated factory line. Dozens of metallic, retro-styled mechanical arms are painted in bold primary colors, sharply defined by thick black outlines. The lighting is harsh and theatrical, casting hard, solid black drop shadows across the concrete floor. A subtle cyan halftone pattern covers the background, emphasizing the mid-century illustrative brutalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8QqH0ucWuCE7H-HKPcL5g1ET4PYenTZguKqgtnZdTi_CdVIfreCt45In9Cgd2-7e3Akk5oqMSIgV6V6gleptgkEopY0E2LEQtCUK-7JFDLrtZj6i8innO0vKu1y3-dCB8MzR7gOcmfKQBn2VALtNFkDaQUesohA0h0JfhOa_vP7kahEJLt_y_eLxtU1jPgVGaP_PcUzVs5f08F-peRWbvVRlaG_wcBv0esRtOQZ_6x63RxdLOkCkADB-887JenLQo91VvlGgyBZWS"/>
+<div class="absolute bottom-4 left-4 right-4 bg-white border-[3px] border-black p-3 comic-shadow-sm transform -rotate-2">
+<p class="font-label-bold uppercase text-on-background text-sm text-center">Fig 1: The Modern Assembly Line</p>
+</div>
+</div>
+<!-- Panel 4: Speech Bubble Testimonial -->
+<div class="col-span-1 md:col-span-6 flex items-center justify-center p-8">
+<div class="relative w-full max-w-md">
+<!-- Speech Bubble Tail -->
+<div class="absolute -bottom-6 left-12 w-8 h-8 bg-white border-b-[4px] border-r-[4px] border-on-background transform rotate-45 z-0"></div>
+<!-- Bubble Content -->
+<div class="relative z-10 bg-white border-[4px] border-on-background rounded-[32px] p-8 comic-shadow">
+<p class="font-headline-md text-on-background mb-4 leading-tight">
+                                "It’s not the robots I’m afraid of. It’s the management using them to turn us into robots."
+                            </p>
+<p class="font-label-bold uppercase text-outline">
+                                — Anonymous Warehouse Worker, 2024
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="mt-12 border-[4px] border-on-background bg-secondary-container comic-shadow p-6 text-center font-headline-md uppercase tracking-widest text-on-background">
+    MADE BY OM GUPTA
+</footer>
+</main>
+</div>
+</body></html>

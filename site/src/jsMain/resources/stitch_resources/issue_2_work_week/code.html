@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Utopia Re-Imagined: The 15-Hour Work Week</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Epilogue & Work Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config from Design System -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#6e5c00",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "on-background": "#1c1c18",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#0039b3",
+                    "on-primary-fixed": "#001551",
+                    "on-tertiary-fixed": "#410000",
+                    "surface-container": "#f1eee7",
+                    "on-tertiary-container": "#ffe1dc",
+                    "primary": "#0041c8",
+                    "tertiary-fixed-dim": "#ffb4a8",
+                    "on-secondary-fixed-variant": "#544600",
+                    "primary-container": "#0055ff",
+                    "surface-dim": "#dcdad3",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#ebe8e1",
+                    "on-tertiary-fixed-variant": "#930100",
+                    "secondary-fixed": "#ffe16d",
+                    "on-secondary-fixed": "#221b00",
+                    "outline-variant": "#c3c5d9",
+                    "surface-tint": "#004dea",
+                    "on-error": "#ffffff",
+                    "secondary": "#705d00",
+                    "secondary-fixed-dim": "#e9c400",
+                    "on-primary-container": "#e3e6ff",
+                    "inverse-on-surface": "#f3f0e9",
+                    "surface-variant": "#e5e2db",
+                    "inverse-surface": "#31312c",
+                    "error": "#ba1a1a",
+                    "background": "#fcf9f2",
+                    "secondary-container": "#fcd400",
+                    "on-surface": "#1c1c18",
+                    "primary-fixed": "#dce1ff",
+                    "outline": "#737688",
+                    "surface-container-highest": "#e5e2db",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#fcf9f2",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#a40100",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f6f3ec",
+                    "inverse-primary": "#b6c4ff",
+                    "on-surface-variant": "#434656",
+                    "surface": "#fcf9f2",
+                    "tertiary-fixed": "#ffdad4",
+                    "tertiary-container": "#d20000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin": "32px",
+                    "unit": "4px",
+                    "container-max": "1280px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Epilogue"],
+                    "body-md": ["Work Sans"],
+                    "headline-md": ["Epilogue"],
+                    "body-lg": ["Work Sans"],
+                    "headline-lg": ["Epilogue"],
+                    "label-bold": ["Work Sans"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "900" }],
+                    "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                    "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                    "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                    "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                    "label-bold": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Comic Halftone Overlay Pattern */
+        .bg-halftone {
+            background-image: radial-gradient(circle, #c3c5d9 2px, transparent 2px);
+            background-size: 8px 8px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex">
+<!-- Shared Component: SideNavBar -->
+<nav class="bg-yellow-400 dark:bg-yellow-600 font-epilogue font-bold uppercase text-black h-screen w-64 border-r-4 border-black border-b-2 border-black/20 shadow-[8px_0px_0px_0px_rgba(0,0,0,1)] fixed left-0 top-0 z-40 flex flex-col hidden md:flex">
+<!-- Header -->
+<div class="p-6 border-b-4 border-black bg-yellow-400">
+<h1 class="text-xl font-black text-black tracking-tight">TOPICS LIST</h1>
+<p class="text-xs font-body-md text-black/70 mt-1 uppercase tracking-widest">Utopia for Realists</p>
+</div>
+<!-- Navigation Tabs -->
+<div class="flex-1 overflow-y-auto py-4">
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span>Intro</span>
+</a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">trending_up</span>
+<span>Human Progress (CH. 1)</span>
+</a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span>Free Money (CH. 2-4)</span>
+</a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">query_stats</span>
+<span>Beyond GDP (CH. 5)</span>
+</a>
+<!-- Active State: "Leisure Time (CH. 6)" -->
+<a class="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-black m-2 p-3 flex items-center gap-3 translate-y-1" href="#">
+<span class="material-symbols-outlined text-action-red">schedule</span>
+<span>Leisure Time (CH. 6)</span>
+</a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">work_off</span>
+<span>Useless Jobs (CH. 7-8)</span>
+</a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">public</span>
+<span>Open Borders (CH. 9)</span>
+</a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span>Radical Ideas (CH. 10)</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col md:ml-64 relative min-h-screen">
+<!-- Canvas: Page Content -->
+<main class="flex-1 w-full max-w-container-max mx-auto p-6 md:p-gutter grid grid-cols-12 gap-gutter">
+<!-- Hero Panel (Offset Layout & Hard Shadow) -->
+<section class="col-span-12 bg-secondary-container border-[4px] border-on-surface shadow-[8px_8px_0px_0px_#1c1c18] relative overflow-hidden flex flex-col md:flex-row items-center min-h-[400px]">
+<!-- Kapow Badge -->
+<div class="absolute -top-4 -right-4 bg-tertiary-container text-on-tertiary border-[3px] border-on-surface transform rotate-12 p-4 shadow-[4px_4px_0px_0px_#1c1c18] z-10">
+<span class="font-headline-md text-headline-md block uppercase leading-none">ISSUE</span>
+<span class="font-headline-xl text-headline-xl block uppercase leading-none mt-1">#2</span>
+</div>
+<!-- Hero Text Content -->
+<div class="w-full md:w-1/2 p-8 md:p-12 z-10 flex flex-col justify-center bg-secondary-container">
+<h2 class="font-headline-xl text-headline-xl text-on-surface uppercase mb-4 leading-[1.1]">
+                        The <span class="text-tertiary-container block">15-Hour</span> Work Week
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface mb-8 font-bold max-w-md">
+                        Keynes predicted it. Technology enabled it. Why are we still grinding? Explore the evolution of time, productivity, and the radical idea of reclaiming our lives.
+                    </p>
+<div>
+<button class="bg-primary text-on-primary font-headline-md text-body-lg uppercase px-8 py-4 border-[3px] border-on-surface shadow-[4px_4px_0px_0px_#1c1c18] hover:translate-y-1 hover:translate-x-1 hover:shadow-none transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">bolt</span>
+                            Read The Manifesto
+                        </button>
+</div>
+</div>
+<!-- Hero Image Panel -->
+<div class="w-full md:w-1/2 h-full min-h-[300px] border-l-[4px] border-on-surface bg-surface-container relative">
+<img alt="Vintage Clock" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-90 contrast-125 grayscale" data-alt="A vintage 1960s comic book style illustration of a massive, imposing, mechanical pocket clock shattering into pieces. The scene is dominated by heavy black linework, stark contrasting shadows, and ben-day dot halftones on the background surfaces. The overall color palette uses a stark cream background with striking accents of action red and canary yellow. The mood feels explosive yet liberating, capturing the destruction of the traditional work schedule." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbAn4on_TdQRBrKJj0uNqqcjBL5nqjW24NOVLXj1g7sOhjYrHHQWrPIZ48KNK3dAq43Rm9bOj1iYqPlg2Z_ktXswHmAcrvJPm25_72zFjdA8ZDh44fxkS6xnjjRE8DJfPd1LOQh-517pNozYwdAxWHi7sgctcBUJQh5rvF1G_jiYKUmUXV1zo8RBjr-UkzhCkRaAq1GeldwOyF-jelFsYFlIr8Sne4c0GjnH5fRiGnP8yBWWLLP4lrDqL8xlKrQflriF3qFixAatoS"/>
+<!-- Halftone Overlay for Comic Effect -->
+<div class="absolute inset-0 bg-halftone mix-blend-overlay opacity-50"></div>
+</div>
+</section>
+<!-- Section Divider -->
+<div class="col-span-12 mt-12 mb-4 border-b-[4px] border-on-surface pb-2 flex justify-between items-end">
+<h3 class="font-headline-lg text-headline-lg text-on-surface uppercase">Evolution of the Clock</h3>
+<span class="font-label-bold text-label-bold text-outline uppercase tracking-widest">Chronicles 1890-2024</span>
+</div>
+<!-- Bento Grid: Evolution Panels -->
+<!-- Panel 1: The Grind -->
+<article class="col-span-12 md:col-span-4 bg-surface border-[3px] border-on-surface shadow-[6px_6px_0px_0px_#a40100] flex flex-col group hover:-translate-y-1 transition-transform">
+<div class="h-48 border-b-[3px] border-on-surface relative overflow-hidden bg-primary-fixed-dim">
+<img class="w-full h-full object-cover grayscale contrast-150 group-hover:scale-105 transition-transform duration-500" data-alt="A vintage 1960s comic book style illustration of a massive, imposing, steam-powered industrial clock factory. The scene is dominated by heavy black linework, stark contrasting shadows, and ben-day dot halftones on the walls. The overall color palette uses a stark cream background with striking accents of action red and canary yellow. The mood feels oppressive yet heroic, capturing the grueling early industrial era." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBIOHOcizfC9nlh1_QFBlnw3Xi54b_0EvYYcE8PcCqIJsj1pNSjZ_6SSXj-XOXb5rGdxvz-13UR-cCR7TO6z46Rl40Gp52gKZG9teQhag2SynA9AFRjbgQUp96Ax7aZqDHcOhrjGS0pq6yKCaIw-xDlBPmJWzzN2I5u_dUDhqmsHBZgkmjW2ZxbnL_UG3yTeW-Ne2DToNedvagZAoBoRhLxwxR2afL10A6_q05PIp924Cq0CNAX_HRnDvF9ajbwjLP7--XbMNuNl1g"/>
+<div class="absolute inset-0 bg-tertiary mix-blend-color opacity-40"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="inline-block bg-on-surface text-surface font-label-bold text-xs uppercase px-2 py-1 mb-3 self-start">Era 1</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2 leading-tight">The Industrial Grind</h4>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">70-hour weeks were the norm. Time was mechanized, strictly monitored by foremen, and tied directly to physical output in the factories.</p>
+</div>
+</article>
+<!-- Panel 2: The Compromise -->
+<article class="col-span-12 md:col-span-4 bg-surface border-[3px] border-on-surface shadow-[6px_6px_0px_0px_#0041c8] flex flex-col group hover:-translate-y-1 transition-transform">
+<div class="h-48 border-b-[3px] border-on-surface relative overflow-hidden bg-secondary-fixed">
+<img class="w-full h-full object-cover grayscale contrast-150 group-hover:scale-105 transition-transform duration-500" data-alt="A retro comic panel showing a mid-century modern office setting with an iconic punch-clock dominating the foreground. Workers in 1950s attire are lined up, rendered with thick bold black outlines and flat vibrant colors. The lighting is artificial and bright, highlighting a bold blue filing cabinet and red accents. The aesthetic relies heavily on high-contrast brutalist illustrative techniques typical of vintage comics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2RO2bdrFt2fHLjRtJ_Hpt0x-_Le0g1NDo89MwhFZewuQ21u1mpvJzrrcjj9p5vhNkRNaTJpMidlWmXpwL6RwLRLbwFNCrsH0h3CQFiraihAebg8seZxFqEJXVSUltsWpkdcTYl-Kf17UGshI6U--HvyCl1vk86bkOo7ltZxOsF3StXwJluIoEtu1qcnFGo38KPhLvEHDEQnB4TD6k6D_7TOXv93ZctIgYybFdek6pYz7UITvPIzZhDGmbmY0oA6d9rR-hs5KpKZTu"/>
+<div class="absolute inset-0 bg-primary mix-blend-color opacity-30"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="inline-block bg-on-surface text-surface font-label-bold text-xs uppercase px-2 py-1 mb-3 self-start">Era 2</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2 leading-tight">The 40-Hour Compromise</h4>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">Ford normalized it. The unions fought for it. The 9-to-5 became the golden standard of the 20th century middle-class existence.</p>
+</div>
+</article>
+<!-- Panel 3: The Future -->
+<article class="col-span-12 md:col-span-4 bg-surface border-[3px] border-on-surface shadow-[6px_6px_0px_0px_#fcd400] flex flex-col group hover:-translate-y-1 transition-transform">
+<div class="h-48 border-b-[3px] border-on-surface relative overflow-hidden bg-tertiary-fixed-dim">
+<img class="w-full h-full object-cover grayscale contrast-150 group-hover:scale-105 transition-transform duration-500" data-alt="A futuristic utopian vision of a clock melting away, drawn in a classic silver-age comic book illustrative style. The scene features glowing generative geometric shapes replacing traditional cogs, depicted with heavy black borders and hard-edged shading. The color palette bursts with canary yellow, bold blue, and action red against a pristine cream backdrop. The mood is liberated, optimistic, and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkIa2hlYugW7YR5pvZNmM7HoiEcx1pW9i9Urbbi5h0XpgBkWSxHt836MtTv8VXxKo0dZXuMfNwsx93xs0LkLcWjQvIGFoIan_g3RzC198KXIXWDg48E0jZkzm9j0bFkgF1Ev-2eS3xK-eexs-HcdKUp1MG_FZBPcqKvSW1U_UppBD0jA4MjrTNAzOeptrXPiPuY2Sp_AvjbWZXbkyfQ0z8_69B4QrzUFPlAj256H2Kos9LQziBjqWWwvBIAFAX4snLnrVDG-W2vBKc"/>
+<div class="absolute inset-0 bg-secondary-container mix-blend-color opacity-60"></div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="inline-block bg-tertiary-container text-on-tertiary font-label-bold text-xs uppercase px-2 py-1 mb-3 self-start border border-on-surface">Era 3</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2 leading-tight">The Automated Future</h4>
+<p class="font-body-md text-body-md text-on-surface-variant flex-1">As AI and robotics decouple labor from output, the 15-hour week isn't a luxury—it's an economic necessity to distribute wealth and time.</p>
+</div>
+</article>
+<!-- Deep Dive / Text Content Section -->
+<div class="col-span-12 grid grid-cols-12 gap-gutter mt-12 bg-surface-container-low border-[4px] border-on-surface p-8 shadow-[8px_8px_0px_0px_#1c1c18]">
+<!-- Main Copy -->
+<div class="col-span-12 md:col-span-8 pr-0 md:pr-8 border-b-[3px] md:border-b-0 md:border-r-[3px] border-on-surface pb-8 md:pb-0">
+<h3 class="font-headline-lg text-headline-lg text-on-surface uppercase mb-6 leading-none">The False Promise of Infinite Growth</h3>
+<div class="space-y-4 font-body-lg text-body-lg text-on-surface">
+<p>In 1930, the economist John Maynard Keynes predicted that within a century, technological advancement would be so profound that we would only need to work 15 hours a week. He believed our greatest challenge would be figuring out what to do with all our leisure time.</p>
+<p>We hit the productivity targets he imagined decades ago. Yet, the work week stalled at 40 hours. Instead of trading productivity gains for free time, we traded them for consumption. The system demanded infinite growth, inventing 'bullshit jobs' to keep the machine churning.</p>
+<p class="font-bold border-l-4 border-tertiary-container pl-4 my-6">It is time to audit our existence. The 15-hour work week is not about doing less; it is about living more.</p>
+</div>
+</div>
+<!-- Aside / Speech Bubble Pull Quote -->
+<div class="col-span-12 md:col-span-4 flex items-center justify-center pt-8 md:pt-0 relative">
+<!-- Speech Bubble -->
+<div class="bg-surface border-[4px] border-on-surface p-6 relative shadow-[4px_4px_0px_0px_#1c1c18] z-10 w-full">
+<span class="material-symbols-outlined text-4xl text-primary absolute -top-5 bg-surface px-2">format_quote</span>
+<p class="font-headline-md text-body-lg text-on-surface italic mt-2">
+                            "We have the tools to build a society of leisure, yet we choose to build a society of exhaustion."
+                        </p>
+<p class="font-label-bold text-label-bold text-on-surface mt-4 uppercase">— Editor's Note</p>
+<!-- Bubble Tail -->
+<div class="absolute -bottom-4 left-8 w-6 h-6 bg-surface border-b-[4px] border-r-[4px] border-on-surface transform rotate-45 shadow-[3px_3px_0px_0px_#1c1c18]"></div>
+</div>
+</div>
+</div>
+<!-- Footer Graphic / Progress Bar (Power Meter style) -->
+<footer class="col-span-12 mt-16 mb-8 flex flex-col items-center justify-center border-t-[4px] border-on-surface pt-8">
+<p class="font-headline-lg text-headline-lg uppercase text-on-surface text-center font-bold tracking-widest">MADE BY OM GUPTA</p>
+</footer>
+</main>
+</div>
+</body></html>

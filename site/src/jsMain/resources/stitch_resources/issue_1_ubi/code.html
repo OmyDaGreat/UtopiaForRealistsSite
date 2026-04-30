@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Issue #1: The Power of Free Money</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#6e5c00",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "on-background": "#1c1c18",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#0039b3",
+                        "on-primary-fixed": "#001551",
+                        "on-tertiary-fixed": "#410000",
+                        "surface-container": "#f1eee7",
+                        "on-tertiary-container": "#ffe1dc",
+                        "primary": "#0041c8",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "on-secondary-fixed-variant": "#544600",
+                        "primary-container": "#0055ff",
+                        "surface-dim": "#dcdad3",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#ebe8e1",
+                        "on-tertiary-fixed-variant": "#930100",
+                        "secondary-fixed": "#ffe16d",
+                        "on-secondary-fixed": "#221b00",
+                        "outline-variant": "#c3c5d9",
+                        "surface-tint": "#004dea",
+                        "on-error": "#ffffff",
+                        "secondary": "#705d00",
+                        "secondary-fixed-dim": "#e9c400",
+                        "on-primary-container": "#e3e6ff",
+                        "inverse-on-surface": "#f3f0e9",
+                        "surface-variant": "#e5e2db",
+                        "inverse-surface": "#31312c",
+                        "error": "#ba1a1a",
+                        "background": "#fcf9f2",
+                        "secondary-container": "#fcd400",
+                        "on-surface": "#1c1c18",
+                        "primary-fixed": "#dce1ff",
+                        "outline": "#737688",
+                        "surface-container-highest": "#e5e2db",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fcf9f2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#a40100",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f6f3ec",
+                        "inverse-primary": "#b6c4ff",
+                        "on-surface-variant": "#434656",
+                        "surface": "#fcf9f2",
+                        "tertiary-fixed": "#ffdad4",
+                        "tertiary-container": "#d20000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "32px",
+                        "unit": "4px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Epilogue"],
+                        "body-md": ["Work Sans"],
+                        "headline-md": ["Epilogue"],
+                        "body-lg": ["Work Sans"],
+                        "headline-lg": ["Epilogue"],
+                        "label-bold": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "900" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .halftone-bg {
+            background-image: radial-gradient(#c3c5d9 2px, transparent 2px);
+            background-size: 8px 8px;
+        }
+        .comic-border {
+            border: 4px solid #1c1c18;
+        }
+        .block-shadow-blue {
+            box-shadow: 4px 4px 0 0 #0041c8;
+        }
+        .block-shadow-red {
+            box-shadow: 4px 4px 0 0 #ba1a1a;
+        }
+        .block-shadow-yellow {
+            box-shadow: 4px 4px 0 0 #fcd400;
+        }
+        .block-shadow-black {
+            box-shadow: 4px 4px 0 0 #1c1c18;
+        }
+        .clip-starburst {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+        .clip-jagged {
+            clip-path: polygon(0% 10%, 10% 0%, 20% 10%, 30% 0%, 40% 10%, 50% 0%, 60% 10%, 70% 0%, 80% 10%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 80% 90%, 70% 100%, 60% 90%, 50% 100%, 40% 90%, 30% 100%, 20% 90%, 10% 100%, 0% 90%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- SideNavBar -->
+<nav aria-label="Sidebar Navigation" class="hidden md:flex flex-col bg-yellow-400 h-screen w-64 border-r-4 border-black fixed left-0 top-0 z-40">
+<div class="p-6 border-b-2 border-black/20">
+<h2 class="font-epilogue font-bold uppercase text-black text-xl mb-1">TOPICS LIST</h2>
+<p class="font-body-md text-sm text-black/80">Utopia for Realists</p>
+</div>
+<div class="flex-1 overflow-y-auto py-4">
+<ul class="space-y-2">
+<li>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors font-epilogue font-bold uppercase text-sm hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu_book</span>
+                        Intro
+                    </a>
+</li>
+<li>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors font-epilogue font-bold uppercase text-sm hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">trending_up</span>
+                        Human Progress (CH. 1)
+                    </a>
+</li>
+<li>
+<a class="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-black m-2 p-3 flex items-center gap-3 font-epilogue font-bold uppercase text-sm translate-y-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+                        Free Money (CH. 2-4)
+                    </a>
+</li>
+<li>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors font-epilogue font-bold uppercase text-sm hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">query_stats</span>
+                        Beyond GDP (CH. 5)
+                    </a>
+</li>
+<li>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors font-epilogue font-bold uppercase text-sm hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">schedule</span>
+                        Leisure Time (CH. 6)
+                    </a>
+</li>
+<li>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors font-epilogue font-bold uppercase text-sm hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">work_off</span>
+                        Useless Jobs (CH. 7-8)
+                    </a>
+</li>
+<li>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors font-epilogue font-bold uppercase text-sm hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">public</span>
+                        Open Borders (CH. 9)
+                    </a>
+</li>
+<li>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors font-epilogue font-bold uppercase text-sm hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">lightbulb</span>
+                        Radical Ideas (CH. 10)
+                    </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<div class="flex-1 md:ml-64 flex flex-col min-h-screen overflow-x-hidden">
+<!-- Main Content Area -->
+<main class="flex-1 p-6 md:p-margin halftone-bg">
+<div class="max-w-container-max mx-auto space-y-12">
+<!-- Issue Header Panel -->
+<section class="bg-white comic-border block-shadow-blue p-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-container rounded-full mix-blend-multiply opacity-50 -translate-y-1/2 translate-x-1/4"></div>
+<div class="relative z-10 max-w-3xl">
+<span class="inline-block bg-primary text-on-primary font-headline-md px-4 py-1 comic-border mb-4 transform -rotate-2">ISSUE #1</span>
+<h1 class="font-headline-xl text-on-background mb-6 uppercase">The Power of Free Money</h1>
+<p class="font-body-lg text-on-surface-variant border-l-4 border-error pl-4">A critical look at Universal Basic Income not as a handout, but as the ultimate venture capital investment in human potential.</p>
+</div>
+</section>
+<!-- Bento Grid Panels -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Panel 1: The Concept -->
+<div class="md:col-span-8 bg-surface comic-border block-shadow-black flex flex-col">
+<div class="bg-primary border-b-4 border-black p-4">
+<h2 class="font-headline-md text-on-primary uppercase tracking-wide">The Concept</h2>
+</div>
+<div class="p-6 flex-1 flex flex-col md:flex-row gap-6 items-center">
+<div class="flex-1 space-y-4">
+<p class="font-body-lg leading-relaxed">Imagine a floor below which no one can fall. Universal Basic Income (UBI) provides a regular, unconditional cash payment to every citizen. It strips away the complex bureaucracy of conditional welfare.</p>
+<div class="bg-white p-4 comic-border relative">
+<span class="absolute -top-3 -left-3 bg-secondary-container text-on-secondary-container font-label-bold px-2 py-1 comic-border transform -rotate-6">FACT</span>
+<p class="font-body-md font-bold">It's an investment in stability, allowing individuals to take risks, educate themselves, and negotiate better wages without the fear of destitution.</p>
+</div>
+</div>
+<div class="w-full md:w-1/3 aspect-square bg-surface-variant comic-border overflow-hidden relative group">
+<img alt="A stylized, high-contrast illustration of hands holding a glowing, golden coin against a deep blue, comic-book style background with heavy black outlines. The scene suggests empowerment and value transfer. The lighting is dramatic, highlighting the texture of the hands and the shine of the coin, evoking a retro-pop art aesthetic." class="w-full h-full object-cover grayscale contrast-150 group-hover:grayscale-0 transition-all duration-500" data-alt="A stylized, high-contrast illustration of hands holding a glowing, golden coin against a deep blue, comic-book style background with heavy black outlines. The scene suggests empowerment and value transfer. The lighting is dramatic, highlighting the texture of the hands and the shine of the coin, evoking a retro-pop art aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYrx9agxJIQVH75Lf2afPR7SFCf0PK55991yqTuQSQyLb-VskGv-d2badXoaldeaj1X54jtG3BS1JArJunxJ-u38G2sdeMZyxz_MlcVRRTSUrOpfznbN0sHGxosyvmjyhLbI3nvb8l21lJzwqQyn4R4569IWGBUxbzHrZ0ANBcylIgsPE97042pCu14-jbr8Br3n-IykIpsIuhqi-zA-4t2INYa84IdlrKpKjjHAdMHbx--Bw9zvl9puWVddp9chsyyIsyuzedfNx2"/>
+</div>
+</div>
+</div>
+<!-- Panel 2: The Return -->
+<div class="md:col-span-4 bg-error-container comic-border block-shadow-red relative p-6 flex flex-col justify-center items-center text-center">
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-secondary-container clip-starburst flex items-center justify-center comic-border rotate-12 z-10 shadow-lg">
+<span class="font-headline-md text-on-secondary-container leading-none text-center transform -rotate-12">100%<br/><span class="text-sm">Increase!</span></span>
+</div>
+<span class="material-symbols-outlined text-6xl text-error mb-4 block" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<h3 class="font-headline-md text-on-error-container mb-2 uppercase">Well-being Skyrockets</h3>
+<p class="font-body-md text-on-surface-variant">Studies show direct cash transfers dramatically reduce stress, improve health outcomes, and increase entrepreneurial activity.</p>
+</div>
+<!-- Panel 3: Why It's An Investment -->
+<div class="md:col-span-12 bg-white comic-border block-shadow-yellow overflow-hidden">
+<div class="bg-secondary-container border-b-4 border-black p-4 flex justify-between items-center">
+<h2 class="font-headline-md text-on-secondary-container uppercase tracking-wide">The ROI of UBI</h2>
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 divide-y-4 md:divide-y-0 md:divide-x-4 divide-black">
+<div class="p-8 hover:bg-surface-variant transition-colors">
+<h4 class="font-headline-lg text-primary mb-2">01.</h4>
+<h5 class="font-label-bold text-xl mb-3 uppercase">Eradicates Poverty Trap</h5>
+<p class="font-body-md text-on-surface-variant">Unlike means-tested benefits that punish work, UBI ensures every hour worked increases total income, incentivizing productivity.</p>
+</div>
+<div class="p-8 hover:bg-surface-variant transition-colors">
+<h4 class="font-headline-lg text-error mb-2">02.</h4>
+<h5 class="font-label-bold text-xl mb-3 uppercase">Fosters Innovation</h5>
+<p class="font-body-md text-on-surface-variant">When survival isn't the primary daily objective, human cognitive bandwidth is freed up for creative problem-solving and innovation.</p>
+</div>
+<div class="p-8 hover:bg-surface-variant transition-colors relative">
+<div class="absolute top-4 right-4 text-secondary opacity-20">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<h4 class="font-headline-lg text-secondary mb-2">03.</h4>
+<h5 class="font-label-bold text-xl mb-3 uppercase">Boosts Education</h5>
+<p class="font-body-md text-on-surface-variant">Financial security allows individuals to invest time in upskilling and education, creating a more adaptable, highly-skilled workforce.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-black w-full border-t-4 border-red-600 py-8 px-12 flex justify-center items-center z-20">
+<div class="text-white font-black italic text-xl font-epilogue uppercase tracking-widest">
+        MADE BY OM GUPTA
+    </div>
+</footer>
+</div>
+</body></html>

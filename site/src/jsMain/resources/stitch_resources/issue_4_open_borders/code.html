@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Issue #4: The End of Poverty</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config from Guidelines -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#6e5c00",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "on-background": "#1c1c18",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#0039b3",
+                        "on-primary-fixed": "#001551",
+                        "on-tertiary-fixed": "#410000",
+                        "surface-container": "#f1eee7",
+                        "on-tertiary-container": "#ffe1dc",
+                        "primary": "#0041c8",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "on-secondary-fixed-variant": "#544600",
+                        "primary-container": "#0055ff",
+                        "surface-dim": "#dcdad3",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#ebe8e1",
+                        "on-tertiary-fixed-variant": "#930100",
+                        "secondary-fixed": "#ffe16d",
+                        "on-secondary-fixed": "#221b00",
+                        "outline-variant": "#c3c5d9",
+                        "surface-tint": "#004dea",
+                        "on-error": "#ffffff",
+                        "secondary": "#705d00",
+                        "secondary-fixed-dim": "#e9c400",
+                        "on-primary-container": "#e3e6ff",
+                        "inverse-on-surface": "#f3f0e9",
+                        "surface-variant": "#e5e2db",
+                        "inverse-surface": "#31312c",
+                        "error": "#ba1a1a",
+                        "background": "#fcf9f2",
+                        "secondary-container": "#fcd400",
+                        "on-surface": "#1c1c18",
+                        "primary-fixed": "#dce1ff",
+                        "outline": "#737688",
+                        "surface-container-highest": "#e5e2db",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fcf9f2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#a40100",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f6f3ec",
+                        "inverse-primary": "#b6c4ff",
+                        "on-surface-variant": "#434656",
+                        "surface": "#fcf9f2",
+                        "tertiary-fixed": "#ffdad4",
+                        "tertiary-container": "#d20000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "32px",
+                        "unit": "4px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Epilogue", "sans-serif"],
+                        "body-md": ["Work Sans", "sans-serif"],
+                        "headline-md": ["Epilogue", "sans-serif"],
+                        "body-lg": ["Work Sans", "sans-serif"],
+                        "headline-lg": ["Epilogue", "sans-serif"],
+                        "label-bold": ["Work Sans", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "900" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom Halftone pattern simulation */
+        .bg-halftone-cyan {
+            background-color: #fcf9f2;
+            background-image: radial-gradient(#b6c4ff 15%, transparent 16%), radial-gradient(#b6c4ff 15%, transparent 16%);
+            background-size: 8px 8px;
+            background-position: 0 0, 4px 4px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- SideNavBar (From JSON) -->
+<aside class="fixed left-0 top-0 h-full z-40 flex flex-col h-screen w-64 border-r-4 border-black border-b-2 border-black/20 shadow-[8px_0px_0px_0px_rgba(0,0,0,1)] bg-yellow-400 overflow-y-auto">
+<div class="p-6 border-b-4 border-black">
+<div class="text-xl font-black text-black font-epilogue uppercase mb-1">TOPICS LIST</div>
+<div class="text-black/80 font-label-bold text-label-bold uppercase">Utopia for Realists</div>
+</div>
+<nav class="flex-1 py-4 font-epilogue font-bold uppercase">
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+                Intro
+            </a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+                Human Progress (CH. 1)
+            </a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+                Free Money (CH. 2-4)
+            </a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+                Beyond GDP (CH. 5)
+            </a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">schedule</span>
+                Leisure Time (CH. 6)
+            </a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">work_off</span>
+                Useless Jobs (CH. 7-8)
+            </a>
+<!-- Active Item -->
+<a class="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-black m-2 p-3 flex items-center gap-3 translate-y-1 hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">public</span>
+                Open Borders (CH. 9)
+            </a>
+<a class="text-black/80 hover:bg-white/50 m-2 p-3 flex items-center gap-3 transition-colors hover:skew-x-1 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emoji_objects</span>
+                Radical Ideas (CH. 10)
+            </a>
+</nav>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-64 min-h-screen p-gutter pt-8 flex flex-col gap-margin max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="w-full border-4 border-on-background bg-primary-fixed shadow-[8px_8px_0px_0px_#d20000] relative overflow-hidden group">
+<div class="absolute inset-0 bg-halftone-cyan opacity-50 pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-0">
+<div class="p-8 lg:p-12 flex flex-col justify-center bg-white/90 border-b-4 lg:border-b-0 lg:border-r-4 border-on-background backdrop-blur-sm">
+<div class="inline-block bg-secondary-container text-on-secondary-container font-headline-md text-headline-md px-4 py-2 border-4 border-on-background shadow-[4px_4px_0px_0px_#1c1c18] transform -rotate-2 w-max mb-6">
+                        ISSUE #4
+                    </div>
+<h1 class="font-headline-xl text-headline-xl text-on-background uppercase mb-4 drop-shadow-[2px_2px_0px_#b6c4ff]">
+                        The End of Poverty
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant font-bold max-w-lg">
+                        Borders are the single biggest cause of discrimination in all of world history. It's time to open them up and unleash a wave of global prosperity.
+                    </p>
+</div>
+<div class="relative h-64 lg:h-auto min-h-[400px]">
+<img alt="Abstract world map" class="absolute inset-0 w-full h-full object-cover grayscale-[50%] contrast-[150%] mix-blend-multiply" data-alt="A highly stylized, flat-vector illustration of a world map mimicking 1960s comic book aesthetics. The continents are rendered in solid, vibrant primary red, while the oceans are deep comic blue. The map features heavy, jagged black outlines reminiscent of traditional ink work. A subtle newsprint halftone dot texture overlays the entire composition, providing a tactile, retro feel. The lighting is flat and graphic, creating a bold, high-contrast visual impact typical of classic pop art and brutalist design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEsulxZYbENbW0dKo86rNuWbJsfDRpkdHkTKeSthPCV43Q-O3DqLYQcPRSyIFsu4YnbTr0ol8bt6Fv6Pe2G62onvufebjeMdcJjXLFd4I3i7NOWG9tEBSyuZBlXNImTUx7Jjq57ebiJU8bp1ixicck2M7Kv0Gm9kC3OzRD0gUXSkQPote64s5s-vXYK0yDWpvFwn52IO2dVmcNGOahygph73DrZuIZ49dTyeIkHE10K3coX992QNQGH1p9tXp3vv10mlItnyfjnQKc"/>
+<!-- Comic burst overlay -->
+<div class="absolute top-4 right-4 bg-error text-on-error font-headline-md text-headline-md px-6 py-4 border-4 border-on-background shadow-[6px_6px_0px_0px_#fcd400] transform rotate-3">
+                        KAPOW!
+                    </div>
+</div>
+</div>
+</section>
+<!-- Comic Panels Grid -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mt-8">
+<!-- Panel 1: Global Apartheid -->
+<article class="md:col-span-8 border-4 border-on-background bg-surface shadow-[6px_6px_0px_0px_#0041c8] flex flex-col">
+<header class="bg-primary text-on-primary p-4 border-b-4 border-on-background flex justify-between items-center">
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight">Global Apartheid</h2>
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">public_off</span>
+</header>
+<div class="p-6 flex-1 flex flex-col md:flex-row gap-6 items-start bg-halftone-cyan">
+<div class="w-full md:w-1/3 bg-white border-4 border-on-background shadow-[4px_4px_0px_0px_#1c1c18] p-2 transform -rotate-1">
+<img alt="Earth from space" class="w-full h-auto border-2 border-on-background filter contrast-125" data-alt="A dramatic, high-contrast comic book panel illustration showing the Earth from space, split cleanly down the middle by a thick, jagged black ink line. One half of the globe is colored in bright, prosperous canary yellow with crisp details, while the other half is shaded in deep, muted blues and heavy black crosshatching. The overall aesthetic mimics 1960s pop-art with visible Ben-Day dots and solid color blocking, emphasizing the divide in global wealth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuV1Be5EboAwWk-1NQecg6TR4IoqldxgrYL-dPZleneUzSBeJZus4v6rpR9AiA3aZ-be3aJNU6q3wJeJVeQY_nZNELH04k1fd2FhWCEJgB9ezeiauW_rw6Wm7RAr9_atOObWsHQ2J4gE0HVd0ug6jxu-02EiQzi83lPgB3nsszk0nxzJIh6lxWOm6kv-RtPrOo_rbvDoAFuHxCZNvTS0m0V6cFGkAOEX3oFjvV4iCFoERId4-f_rMC3TSxF1d93DUU0t2yKRsqx_hQ"/>
+</div>
+<div class="flex-1 bg-white p-6 border-4 border-on-background rounded-tr-3xl rounded-bl-3xl relative">
+<!-- Speech bubble tail simulation -->
+<div class="absolute -left-3 top-8 w-6 h-6 bg-white border-l-4 border-b-4 border-on-background transform rotate-45"></div>
+<p class="font-body-md text-body-md text-on-background leading-relaxed">
+                            Where you are born determines your wealth more than any other factor. We accept an economic system that structurally locks out billions from opportunity simply because they reside on the wrong side of an arbitrary line drawn on a map. This is the definition of a global caste system.
+                        </p>
+</div>
+</div>
+</article>
+<!-- Panel 2: The Economic Cost -->
+<article class="md:col-span-4 border-4 border-on-background bg-secondary-container shadow-[6px_6px_0px_0px_#1c1c18] flex flex-col">
+<header class="bg-on-background text-surface p-4 border-b-4 border-on-background">
+<h2 class="font-headline-md text-headline-md uppercase">The Cost of Walls</h2>
+</header>
+<div class="p-6 flex-1 flex flex-col gap-4 bg-surface-bright justify-center">
+<div class="flex items-end gap-2 border-b-4 border-on-background pb-2">
+<span class="text-6xl font-headline-xl text-error drop-shadow-[2px_2px_0px_#1c1c18]">$78</span>
+<span class="font-headline-md text-on-background uppercase pb-1">Trillion</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant font-bold">
+                        Estimated increase in global GDP if all borders were opened today. It's not a zero-sum game; it's a massive multiplier waiting to be unleashed.
+                    </p>
+</div>
+</article>
+<!-- Panel 3: Actionable Insights -->
+<article class="md:col-span-12 border-4 border-on-background bg-inverse-surface text-inverse-on-surface shadow-[8px_8px_0px_0px_#dce1ff] mt-4 relative overflow-hidden">
+<!-- Diagonal stripes background -->
+<div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, #000 0, #000 2px, transparent 2px, transparent 8px);"></div>
+<div class="relative z-10 p-8 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-6">
+<div class="bg-primary text-on-primary w-16 h-16 flex items-center justify-center border-4 border-on-primary shadow-[4px_4px_0px_0px_#ffffff] transform rotate-12">
+<span class="material-symbols-outlined text-4xl">key</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg uppercase mb-2">Unlock Human Potential</h3>
+<p class="font-body-md text-body-md max-w-2xl opacity-90">
+                                Migration is the most effective anti-poverty program ever devised. It allows human capital to move to where it is most productive, benefiting both the individual and the host economy.
+                            </p>
+</div>
+</div>
+<button class="bg-secondary-fixed text-on-secondary-fixed font-headline-md text-headline-md uppercase px-8 py-4 border-4 border-on-background shadow-[6px_6px_0px_0px_#1c1c18] hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#1c1c18] transition-all whitespace-nowrap">
+                        Read Full Case
+                    </button>
+</div>
+</article>
+</section>
+<!-- Footer -->
+<footer class="mt-12 border-4 border-on-background bg-secondary-container shadow-[6px_6px_0px_0px_#1c1c18] p-6 text-center transform -skew-x-2">
+<p class="font-headline-md text-headline-md uppercase text-on-background tracking-widest drop-shadow-[2px_2px_0px_#ffffff]">MADE BY OM GUPTA</p>
+</footer>
+</main>
+</body></html>
