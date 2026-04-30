@@ -1,5 +1,6 @@
 site:
   title: "Malefic Kobweb Static Site Template"
+  basePath: "UtopiaForRealistsSite"
 
 server:
   files:
