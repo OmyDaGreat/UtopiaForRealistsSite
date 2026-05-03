@@ -5,26 +5,30 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.H1
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
+import xyz.malefic.staticsite.styles.SiteStyles
+
+data class TopicBigCallout(
+    val label: String,
+    val value: String,
+    val detail: String,
+)
+
+enum class TopicLayoutVariant {
+    SummaryThenHighlights,
+    BigCalloutFirst,
+    ImportantPointFirst,
+}
 
 @Composable
 fun ComicPageContainer(content: @Composable () -> Unit) {
     Div(
         attrs = {
-            style {
-                property("padding", "2rem")
-                property("background-image", "radial-gradient(circle at center, rgba(28, 28, 24, 0.12) 1px, transparent 1.5px)")
-                property("background-size", "10px 10px")
-            }
+            SiteStyles.run { comicContainer() }
         },
     ) {
         Div(
             attrs = {
-                style {
-                    property("max-width", "1100px")
-                    property("margin", "0 auto")
-                    property("display", "grid")
-                    property("gap", "1.5rem")
-                }
+                SiteStyles.run { comicGrid() }
             },
         ) {
             content()
@@ -40,126 +44,174 @@ fun TopicPage(
     summary: String,
     highlights: List<String>,
     accentColor: String,
+    bigCallout: TopicBigCallout? = null,
+    importantPoint: String? = null,
+    quote: String? = null,
+    layoutVariant: TopicLayoutVariant = TopicLayoutVariant.SummaryThenHighlights,
 ) {
     ComicPageContainer {
         Div(
             attrs = {
-                style {
-                    property("background", "#ffffff")
-                    property("border", "4px solid #1c1c18")
-                    property("box-shadow", "6px 6px 0px 0px $accentColor")
-                    property("padding", "2rem")
-                }
+                SiteStyles.run { topicIntroCard(accentColor) }
             },
         ) {
             Div(
                 attrs = {
-                    style {
-                        property("display", "inline-block")
-                        property("background", accentColor)
-                        property("color", "#ffffff")
-                        property("border", "2px solid #1c1c18")
-                        property("padding", "0.35rem 0.8rem")
-                        property("font-family", "'Epilogue', sans-serif")
-                        property("font-weight", "900")
-                        property("text-transform", "uppercase")
-                    }
+                    SiteStyles.run { topicBadge(accentColor) }
                 },
             ) { Text("Topic #$topicNumber") }
 
             H1(
                 attrs = {
-                    style {
-                        property("margin", "1rem 0 0.5rem")
-                        property("font-family", "'Epilogue', sans-serif")
-                        property("font-size", "clamp(2rem, 6vw, 4.25rem)")
-                        property("font-weight", "900")
-                        property("line-height", "0.95")
-                        property("letter-spacing", "-0.03em")
-                        property("text-transform", "uppercase")
-                    }
+                    SiteStyles.run { topicHeading() }
                 },
             ) { Text(title) }
 
             P(
                 attrs = {
-                    style {
-                        property("margin", "0")
-                        property("font-size", "1.05rem")
-                        property("font-weight", "800")
-                        property("color", accentColor)
-                        property("text-transform", "uppercase")
-                        property("letter-spacing", "0.02em")
-                    }
+                    SiteStyles.run { topicSubtitle(accentColor) }
                 },
             ) { Text(subtitle) }
         }
 
-        Div(
-            attrs = {
-                style {
-                    property("background", "#f6f3ec")
-                    property("border", "4px solid #1c1c18")
-                    property("box-shadow", "6px 6px 0px 0px #1c1c18")
-                    property("padding", "1.5rem")
-                }
-            },
-        ) {
-            P(
-                attrs = {
-                    style {
-                        property("margin", "0")
-                        property("font-size", "1.08rem")
-                        property("line-height", "1.7")
-                        property("font-weight", "600")
-                    }
-                },
-            ) { Text(summary) }
+        when (layoutVariant) {
+            TopicLayoutVariant.SummaryThenHighlights -> {
+                SummaryCard(summary)
+                BigCalloutCard(bigCallout, accentColor)
+                ImportantPointCard(importantPoint, accentColor)
+                QuoteCard(quote)
+                HighlightsGrid(highlights, accentColor)
+            }
+            TopicLayoutVariant.BigCalloutFirst -> {
+                BigCalloutCard(bigCallout, accentColor)
+                SummaryCard(summary)
+                QuoteCard(quote)
+                HighlightsGrid(highlights, accentColor)
+            }
+            TopicLayoutVariant.ImportantPointFirst -> {
+                ImportantPointCard(importantPoint, accentColor)
+                SummaryCard(summary)
+                BigCalloutCard(bigCallout, accentColor)
+                QuoteCard(quote)
+                HighlightsGrid(highlights, accentColor)
+            }
         }
+    }
+}
 
+@Composable
+private fun SummaryCard(summary: String) {
+    Div(
+        attrs = {
+            SiteStyles.run { topicSummaryCard() }
+        },
+    ) {
+        P(
+            attrs = {
+                SiteStyles.run { topicSummaryText() }
+            },
+        ) { Text(summary) }
+    }
+}
+
+@Composable
+private fun BigCalloutCard(
+    bigCallout: TopicBigCallout?,
+    accentColor: String,
+) {
+    if (bigCallout == null) return
+
+    Div(
+        attrs = {
+            SiteStyles.run { bigCalloutCard(accentColor) }
+        },
+    ) {
         Div(
             attrs = {
-                style {
-                    property("display", "grid")
-                    property("grid-template-columns", "repeat(auto-fit, minmax(220px, 1fr))")
-                    property("gap", "1rem")
-                }
+                SiteStyles.run { bigCalloutLabel(accentColor) }
             },
-        ) {
-            highlights.forEachIndexed { index, highlight ->
+        ) { Text(bigCallout.label) }
+        Div(
+            attrs = {
+                SiteStyles.run { bigCalloutValue() }
+            },
+        ) { Text(bigCallout.value) }
+        P(
+            attrs = {
+                SiteStyles.run { bigCalloutDetail() }
+            },
+        ) { Text(bigCallout.detail) }
+    }
+}
+
+@Composable
+private fun ImportantPointCard(
+    importantPoint: String?,
+    accentColor: String,
+) {
+    if (importantPoint == null) return
+
+    Div(
+        attrs = {
+            SiteStyles.run { importantPointCard(accentColor) }
+        },
+    ) {
+        Div(
+            attrs = {
+                SiteStyles.run { importantPointLabel() }
+            },
+        ) { Text("Most Important Point") }
+        P(
+            attrs = {
+                SiteStyles.run { importantPointText() }
+            },
+        ) { Text(importantPoint) }
+    }
+}
+
+@Composable
+private fun QuoteCard(quote: String?) {
+    if (quote == null) return
+
+    Div(
+        attrs = {
+            SiteStyles.run { quoteCard() }
+        },
+    ) {
+        P(
+            attrs = {
+                SiteStyles.run { quoteText() }
+            },
+        ) { Text(quote) }
+    }
+}
+
+@Composable
+private fun HighlightsGrid(
+    highlights: List<String>,
+    accentColor: String,
+) {
+    Div(
+        attrs = {
+            SiteStyles.run { keyPointsGrid() }
+        },
+    ) {
+        highlights.forEachIndexed { index, highlight ->
+            Div(
+                attrs = {
+                    SiteStyles.run { keyPointCard(accentColor) }
+                },
+            ) {
                 Div(
                     attrs = {
-                        style {
-                            property("background", "#ffffff")
-                            property("border", "4px solid #1c1c18")
-                            property("box-shadow", "4px 4px 0px 0px $accentColor")
-                            property("padding", "1rem")
-                        }
+                        SiteStyles.run { keyPointLabel(accentColor) }
                     },
-                ) {
-                    Div(
-                        attrs = {
-                            style {
-                                property("font-family", "'Epilogue', sans-serif")
-                                property("font-size", "0.85rem")
-                                property("font-weight", "900")
-                                property("text-transform", "uppercase")
-                                property("margin-bottom", "0.5rem")
-                                property("color", accentColor)
-                            }
-                        },
-                    ) { Text("Key Point ${index + 1}") }
-                    P(
-                        attrs = {
-                            style {
-                                property("margin", "0")
-                                property("font-size", "1rem")
-                                property("line-height", "1.6")
-                                property("font-weight", "500")
-                            }
-                        },
-                    ) { Text(highlight) }
-                }
+                ) { Text("Key Point ${index + 1}") }
+                P(
+                    attrs = {
+                        SiteStyles.run { keyPointText() }
+                    },
+                ) { Text(highlight) }
             }
         }
     }
